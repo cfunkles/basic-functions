@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Functions! (Five)</title>
+</head>
+<body>
+	<script>
+		var sum = 0;
+		var number = 0;
+
+		function addToAverage(num) {
+			sum = sum + num;
+			number = number + 1;
+		}
+
+		function getAverage() {
+			return sum / number;
+		}
+
+		/*
+			TODO: Using the functions above, compute and print the average of:
+			13, 4, 134, 21, 30
+		*/
+		addToAverage(13);
+		addToAverage(4);
+		addToAverage(134);
+		addToAverage(21);
+		addToAverage(30);
+		console.log(getAverage());//returns 40.4
+
+		
+			
+			
+		//Optional: Create a function which averages an array of numbers
+		function arrAverages(arr) {
+			var result = 0;
+			var addToAverage = 0;
+			for (var i = 0; i < arr.length; i++) {
+				//loops to number of arr items
+				addToAverage += arr[i];
+				//adds the value of the array at position i in array. 
+			}
+			result = addToAverage / arr.length;
+			//stores value into new variable
+			return result;
+		}
+		console.log(arrAverages([5,7,2,4,9,12])); //6.5
+		console.log(arrAverages([200,15,330,0,0,2])); // 91.16666666667
+		
+		//Optional: Create a variadic funciton which averages all of its arguments
+		function argumentAverages() {
+			var result = 0;
+			var addToAverage = 0;
+			for (var i = 0; i < arguments.length; i++) {
+				//loops the arguments inputed
+				addToAverage += arguments[i];
+				//adds the value of the arguments at position i in function parameter.
+			}
+			result = addToAverage / arguments.length;
+			//stores value into new variable
+			return result;
+		}
+		console.log(argumentAverages(1,2,43,6));//13
+		console.log(argumentAverages(500,1,0,0,0,0,0,0,0,15));//51.6
+
+
+	</script>
+</body>
+</html>

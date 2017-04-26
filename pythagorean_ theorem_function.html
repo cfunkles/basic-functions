@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Functions! (Two)</title>
+</head>
+<body>
+	<script>
+
+		// Given two sides of a triangle (t1_a, t1_b) we compute the third (t1_c).
+		// The code below is repetitive. Write a function, "triangle", which takes in two sides of
+		// a triangle and returns the third using the equation repeated below.
+
+		// Then, convert the code below to use the new "triangle" function instead of repeating the
+		// equation three times.
+
+		var triangle = function(t_a, t_b) {
+			//pythagorean theorem in action
+			var t_c = Math.sqrt((t_a * t_a) + (t_b * t_b));
+			return t_c;
+		};
+		var triangleOneSideC = triangle(3,4); 
+		var triangleTwoSideC = triangle(5,9);
+		var triangleThreeSideC = triangle(9,12);
+		console.log(triangleOneSideC); // prints 5
+		console.log(triangleTwoSideC); // prints 10.295630140987
+		console.log(triangleThreeSideC); // prints 15
+	
+	</script>
+</body>
+</html>
